@@ -6,8 +6,8 @@ court/insertion.
 
 ## Documents ##
 
-- Cours : [ici](M4206C-CM-2018.pdf)
-  - Dossier d'exemples et de sources pour le cours : [ici](CM-sources)
-- TDs :   [ici](M4206C-TD-2018.pdf)
-- TPs :   [ici](M4206C-TP-2018.pdf)
-  - Dossier d'exemples et de sources pour le TP : [ici](TP-sources)
+- CM : [ici](M4206C-CM-2018.pdf)
+  - Exemples et sources : [ici](CM-sources)
+- TD :   [ici](M4206C-TD-2018.pdf)
+- TP :   [ici](M4206C-TP-2018.pdf)
+  - Exemples et sources : [ici](TP-sources)
