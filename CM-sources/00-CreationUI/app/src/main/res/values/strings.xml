@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">00-CreationUI</string>
+    <string name="main_button_text">Couleur définie dans colors.xml</string>
+    <string name="top_page_label">Label contenant du texte dans strings.xml</string>
 </resources>
