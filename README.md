@@ -8,6 +8,6 @@ court/insertion.
 
 - CM : [ici](M4206C-CM-2018.pdf)
   - Exemples/sources/fichiers : [ici](CM-sources)
-- TD :   [ici](M4206C-TD-2018.pdf)
-- TP :   [ici](M4206C-TP-2018.pdf)
+- TD : [ici](M4206C-TD-2018.pdf)
+- TP : [ici](M4206C-TP-2018.pdf)
   - Exemples/sources/fichiers : [ici](TP-sources)
