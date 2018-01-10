@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">05-BluetoothScanner</string>
+    <string name="empty"></string>
+    <string name="bt_not_enabled">Bluetooth is not enabled</string>
+</resources>
