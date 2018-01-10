@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">04-Geoloc</string>
+    <string name="no_geoloc">Les coordonnées GPS apparaîtront ici lorsqu'elles seront disponibles</string>
+    <string name="geoloc">Latitude: %.2f, Longitude: %.2f</string>
+</resources>
