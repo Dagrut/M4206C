@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">03-events</string>
+    <string name="method1">Méthode 1</string>
+    <string name="method2">Méthode 2</string>
+    <string name="method3">Méthode 3</string>
+    <string name="method4">Méthode 4</string>
+</resources>
