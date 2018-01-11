@@ -33,6 +33,7 @@ public class NetHandler extends AsyncTask<Void, Void, Void> {
         void onConnect();
         void onMessage(String msg);
         void onError(Exception reason);
+        boolean onDisconnect(); /** < Returns true to reconnect, false otherwise. This is *NOT* called on the UI thread. */
     }
 
     final private EventsHandler mEvtHdl;
@@ -80,20 +81,22 @@ public class NetHandler extends AsyncTask<Void, Void, Void> {
     @Override
     protected Void doInBackground(Void... params) {
         try {
-            mSock = new Socket(mIp, mPort);
-            if(mSock.isConnected()) {
-                mReader = new BufferedReader(new InputStreamReader(mSock.getInputStream()));
-                mWriter = new BufferedWriter(new OutputStreamWriter(mSock.getOutputStream()));
-                sendConnected();
-                String line;
-                while(mReader != null) {
-                    line = mReader.readLine();
-                    receivedMessage(line);
+            do {
+                mSock = new Socket(mIp, mPort);
+                if(mSock.isConnected()) {
+                    mReader = new BufferedReader(new InputStreamReader(mSock.getInputStream()));
+                    mWriter = new BufferedWriter(new OutputStreamWriter(mSock.getOutputStream()));
+                    sendConnected();
+                    String line;
+                    while (mSock.isConnected()) {
+                        line = mReader.readLine();
+                        receivedMessage(line);
+                    }
                 }
-            }
-            else {
-                sendError(new ConnectException("Could not connect to " + mIp));
-            }
+                else {
+                    sendError(new ConnectException("Could not connect to " + mIp));
+                }
+            } while(mEvtHdl.onDisconnect());
         }
         catch(Exception e) {
             sendError(e);
